@@ -21,103 +21,126 @@ export default function SignUp() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-sky-100 via-white to-indigo-100 px-4 py-10">
-      <div className="relative w-full max-w-4xl rounded-3xl overflow-hidden shadow-2xl grid lg:grid-cols-2">
-        
-        {/* Left Section - Brand */}
-        <div className="bg-gradient-to-br from-indigo-700 via-blue-600 to-cyan-500 p-10 flex flex-col justify-center text-white relative overflow-hidden">
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-4">
-            Welcome to <span className="text-yellow-300">SkillSwap</span>
+    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-sky-100 flex items-center justify-center px-4 py-10">
+      <div className="max-w-5xl w-full grid md:grid-cols-2 bg-white/80 backdrop-blur-xl shadow-2xl rounded-3xl overflow-hidden border border-indigo-100">
+
+        {/* Left Section (Brand / Banner) */}
+        <div className="hidden md:flex flex-col justify-center items-center bg-gradient-to-br from-indigo-700 via-blue-600 to-cyan-500 text-white p-10 relative overflow-hidden">
+          <h1 className="text-5xl font-extrabold mb-4">
+            <span className="text-yellow-300">SkillSwap</span>
           </h1>
-          <p className="text-lg md:text-xl mb-8 leading-relaxed opacity-90">
-            Learn, share, and grow together! Join our professional community to exchange skills and expand your knowledge.
-          </p>
-          <p className="text-sm font-semibold opacity-80">
-            Already have an account?{" "}
-            <a href="/login" className="underline text-yellow-300 hover:text-yellow-200">
-              Login here
-            </a>
+          <p className="text-lg opacity-90 text-center leading-relaxed">
+            Empower your community through shared skills — teach, learn, 
+            and grow together with people near you.
           </p>
 
-          {/* Decorative Blur Circles */}
-          <div className="absolute -top-10 -left-10 w-40 h-40 bg-yellow-400/30 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-10 -right-10 w-48 h-48 bg-blue-400/30 rounded-full blur-3xl animate-pulse"></div>
+          {/* Decorative Circles */}
+          <div className="absolute -top-10 -left-10 w-40 h-40 bg-yellow-400/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-10 -right-10 w-56 h-56 bg-blue-400/30 rounded-full blur-3xl animate-pulse"></div>
         </div>
 
-        {/* Right Section - SignUp Form */}
-        <div className="bg-white/70 backdrop-blur-lg p-10 flex flex-col justify-center">
-          <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">
-            Create Your Account
-          </h2>
+        {/* Right Section (SignUp Form) */}
+        <div className="p-10 md:p-14 flex flex-col justify-center">
+          <div className="mb-8 text-center">
+            <h2 className="md:text-3xl text-xl font-bold text-indigo-700 mb-2">
+              Join the SkillSwap Community
+            </h2>
+            <p className="text-gray-500 text-sm">
+              Share your skills, learn from others, and connect through collaboration.
+            </p>
+          </div>
 
           <form onSubmit={handleSignUp} className="space-y-5">
-            {/* Name */}
+            {/* Full Name */}
             <div>
-              <label className="block mb-1 text-gray-700 font-medium">Full Name</label>
+              <label className="block text-gray-700 text-sm font-medium mb-1">
+                Full Name
+              </label>
               <input
                 type="text"
                 name="name"
-                placeholder="Enter your full name"
-                className="w-full p-3 rounded-lg border border-gray-300 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-indigo-500 bg-white/80"
+                placeholder="John Doe"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg bg-white/70 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-indigo-400"
                 required
               />
             </div>
 
             {/* Email */}
             <div>
-              <label className="block mb-1 text-gray-700 font-medium">Email Address</label>
+              <label className="block text-gray-700 text-sm font-medium mb-1">
+                Email Address
+              </label>
               <input
                 type="email"
                 name="email"
-                placeholder="Enter your email"
-                className="w-full p-3 rounded-lg border border-gray-300 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-indigo-500 bg-white/80"
+                placeholder="example@email.com"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg bg-white/70 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-indigo-400"
                 required
               />
             </div>
 
             {/* Photo URL */}
             <div>
-              <label className="block mb-1 text-gray-700 font-medium">Photo URL</label>
+              <label className="block text-gray-700 text-sm font-medium mb-1">
+                Profile Photo URL
+              </label>
               <input
                 type="text"
                 name="photo"
-                placeholder="Enter photo URL"
-                className="w-full p-3 rounded-lg border border-gray-300 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-indigo-500 bg-white/80"
+                placeholder="https://your-photo-link.com"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg bg-white/70 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-indigo-400"
               />
             </div>
 
             {/* Password */}
             <div>
-              <label className="block mb-1 text-gray-700 font-medium">Password</label>
+              <label className="block text-gray-700 text-sm font-medium mb-1">
+                Password
+              </label>
               <input
                 type="password"
                 name="password"
-                placeholder="Enter your password"
-                className="w-full p-3 rounded-lg border border-gray-300 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-indigo-500 bg-white/80"
+                placeholder="••••••"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg bg-white/70 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-indigo-400"
                 required
               />
             </div>
 
-            {/* Submit */}
+            {/* Submit Button */}
             <button
               type="submit"
-              className="w-full py-3 mt-4 bg-gradient-to-r from-indigo-600 to-blue-500 text-white font-semibold rounded-lg shadow-lg hover:from-blue-600 hover:to-indigo-700 transition-all"
+              className="w-full py-3 bg-gradient-to-r from-indigo-600 to-blue-500 text-white font-semibold rounded-lg shadow-md hover:from-blue-600 hover:to-indigo-700 transition-all"
             >
-              Sign Up
+              Create My SkillSwap Account
             </button>
           </form>
 
           {/* Divider */}
-          <div className="my-6 flex items-center justify-center text-gray-500">or continue with</div>
+          <div className="flex items-center my-6">
+            <div className="flex-grow border-t border-gray-300"></div>
+            <span className="px-3 text-gray-500 text-sm">or</span>
+            <div className="flex-grow border-t border-gray-300"></div>
+          </div>
 
-          {/* Google SignIn */}
+          {/* Google Sign In */}
           <button
             onClick={handleGoogleSignIn}
-            className="w-full flex items-center justify-center gap-3 py-3 bg-white/30 rounded-lg border border-gray-200 hover:bg-white/40 text-gray-800 font-medium transition"
+            className="w-full flex items-center justify-center gap-3 py-3 border border-gray-200 rounded-lg hover:bg-gray-50 text-gray-800 font-medium transition"
           >
             <FcGoogle className="text-2xl" />
-            Sign Up with Google
+            Continue with Google
           </button>
+
+          {/* Footer */}
+          <p className="text-center text-gray-600 mt-6 md:text-sm text-[12px]">
+            Already part of SkillSwap?{" "}
+            <a
+              href="/login"
+              className="text-indigo-600 font-semibold hover:underline"
+            >
+              Log in here
+            </a>
+          </p>
         </div>
       </div>
     </div>
