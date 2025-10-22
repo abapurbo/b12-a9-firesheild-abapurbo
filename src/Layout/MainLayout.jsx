@@ -6,7 +6,7 @@ import Footer from './Footer'
 export default function MainLayout() {
   return (
     <div>
-        <div>
+        <div className='bg-gradient-to-br from-indigo-100 via-sky-50 to-blue-100'>
           <Navbar></Navbar>
         </div>
         <div>

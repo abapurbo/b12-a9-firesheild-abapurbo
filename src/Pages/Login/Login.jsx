@@ -33,13 +33,13 @@ export default function Login() {
             <label className="block text-gray-700 font-medium mb-1">
               Email Address
             </label>
-            <div className="flex items-center border border-gray-300 rounded-lg px-3 bg-white/80 focus-within:ring-2 focus-within:ring-indigo-400">
+            <div className="flex items-center border border-gray-300 rounded-lg px-3  focus-within:ring-2 focus-within:ring-indigo-400">
               <FaEnvelope className="text-gray-500 mr-2" />
               <input
                 type="email"
                 name="email"
                 placeholder="Enter your email"
-                className="w-full p-2 bg-transparent outline-none"
+                className="w-full p-2  outline-none"
                 required
               />
             </div>
@@ -50,7 +50,7 @@ export default function Login() {
             <label className="block text-gray-700 font-medium mb-1">
               Password
             </label>
-            <div className="flex items-center border border-gray-300 rounded-lg px-3 bg-white/80 focus-within:ring-2 focus-within:ring-indigo-400">
+            <div className="flex items-center border border-gray-300 rounded-lg px-3  focus-within:ring-2 focus-within:ring-indigo-400">
               <FaLock className="text-gray-500 mr-2" />
               <input
                 type="password"

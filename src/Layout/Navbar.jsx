@@ -9,10 +9,11 @@ const Navbar = () => {
   const [open, setOpen] = useState(false)
   console.log(icon)
   return (
-    <div
-      className="navbar fixed top-0 left-0 w-full z-50 md:px-6 px-3 py-3 
-      backdrop-blur-lg bg-linear-to-r from-gray-100/90 via-white/80 to-gray-200/90 
-      shadow-md border-b border-gray-300/60 text-gray-800"
+    <div className="bg-gradient-to-br fixed top-0 left-0 w-full from-indigo-100 via-sky-50 to-blue-100">
+      <div
+      className="navbar  z-50 md:px-6 px-3 py-3 
+      backdrop-blur-lg  container mx-auto
+      border-b border-gray-300/60 text-gray-800"
     >
       {/* Logo Section */}
       <div className="flex-1 flex flex-row items-center  space-x-2 relative">
@@ -156,6 +157,7 @@ const Navbar = () => {
           </>
         )}
       </div>
+    </div>
     </div>
   );
 };
