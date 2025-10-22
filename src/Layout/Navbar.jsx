@@ -4,15 +4,15 @@ import { Link, NavLink } from "react-router"
 import { IoMdClose, IoMdMenu } from "react-icons/io";
 
 const Navbar = () => {
-  const { user, handleLogout } = useAuth();
+  const { user, logOut } = useAuth();
   const [icon, setIcon] = useState(true)
   const [open, setOpen] = useState(false)
   console.log(icon)
   return (
-    <div className="bg-gradient-to-br fixed top-0 left-0 w-full from-indigo-100 via-sky-50 to-blue-100">
+    <div className="bg-linear-to-br fixed z-50 top-0 left-0 w-full bg-white/75 backdrop-blur-lg">
       <div
       className="navbar  z-50 md:px-6 px-3 py-3 
-      backdrop-blur-lg  container mx-auto
+        container mx-auto
       border-b border-gray-300/60 text-gray-800"
     >
       {/* Logo Section */}
@@ -56,8 +56,8 @@ const Navbar = () => {
           to="/"
           className={({ isActive }) =>
             `px-3 py-2 rounded-md font-medium transition ${isActive
-              ? "underline font-semibold text-blue-600"
-              : "hover:bg-gray-200/70 hover:text-blue-600"
+              ? "underline underline-offset-4 font-semibold text-blue-600"
+              : " hover:text-blue-600"
             }`
           }
         >
@@ -68,8 +68,8 @@ const Navbar = () => {
           to="/profile"
           className={({ isActive }) =>
             `px-3 py-2 rounded-md font-medium transition ${isActive
-              ? "bg-blue-100 text-blue-600"
-              : "hover:bg-gray-200/70 hover:text-blue-600"
+              ? "underline underline-offset-4 font-semibold text-blue-600"
+              : "hover:text-blue-600"
             }`
           }
         >
@@ -104,7 +104,7 @@ const Navbar = () => {
                   to="/profile"
                   className={({ isActive }) =>
                     `px-3 py-2 rounded-md font-medium transition ${isActive
-                      ? "bg-blue-100 text-blue-600"
+                      ? "underline underline-offset-4 text-blue-600"
                       : "hover:bg-gray-200/70 hover:text-blue-600"
                     }`
                   }
@@ -113,8 +113,8 @@ const Navbar = () => {
                 </NavLink></li>
                 <li>
                   <button
-                    onClick={handleLogout}
-                    className="btn btn-outline btn-sm border-blue-400 text-blue-600 hover:bg-blue-500 hover:text-white transition"
+                    onClick={()=>logOut()}
+                    className="btn   border-blue-400 text-blue-600 hover:bg-blue-500 hover:text-white transition"
                   >
                     Logout
                   </button>
@@ -124,8 +124,8 @@ const Navbar = () => {
             </div>
 
             <button
-              onClick={handleLogout}
-              className="btn btn-outline hidden lg:block btn-sm border-blue-400 text-blue-600 hover:bg-blue-500 hover:text-white transition"
+              onClick={()=>logOut()}
+              className="btn btn-primary border-blue-400 text-white hover:bg-blue-500 hover:text-white transition"
             >
               Logout
             </button>
@@ -136,8 +136,8 @@ const Navbar = () => {
               to="/login"
               className={({ isActive }) =>
                 `px-3 py-2 rounded-md font-medium transition ${isActive
-                  ? "bg-blue-100 text-blue-600"
-                  : "hover:bg-gray-200/70 hover:text-blue-600"
+                  ? "underline font-semibold text-blue-600"
+                  : "hover:text-blue-600"
                 }`
               }
             >
@@ -147,8 +147,8 @@ const Navbar = () => {
               to="/signUp"
               className={({ isActive }) =>
                 `px-3 py-2 rounded-md font-medium transition ${isActive
-                  ? "bg-blue-100 text-blue-600"
-                  : "hover:bg-gray-200/70 hover:text-blue-600"
+                  ? "underline font-semibold text-blue-600"
+                  : "hover:text-blue-600"
                 }`
               }
             >

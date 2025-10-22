@@ -3,6 +3,8 @@ import { lazy, Suspense } from "react";
 import Loading from "../Components/Loading";
 import Home from "../Pages/Home/Home";
 import MyProfile from "../Pages/MyProfile/MyProfile";
+import PrivateRoute from "../Private/PrivateRoute";
+import ForgetPassword from "../Pages/ForgetPassword/ForgetPassword";
 
 const MainLayout = lazy(() => import("../Layout/MainLayout"))
 const ErrorPage = lazy(() => import("../Pages/Error/ErrorPage"))
@@ -25,7 +27,9 @@ const router = createBrowserRouter([
          },
          {
             path: '/profile',
-            Component: MyProfile
+            element: <PrivateRoute>
+               <MyProfile></MyProfile>
+            </PrivateRoute>
          }
       ],
 
@@ -38,6 +42,11 @@ const router = createBrowserRouter([
    {
       path: '/signUp', element: <Suspense fallback={<Loading />}>
          <SignUp></SignUp>
+      </Suspense>,
+   },
+   {
+      path: '/forgetPassword', element: <Suspense fallback={<Loading />}>
+         <ForgetPassword></ForgetPassword>
       </Suspense>,
    }
 ])
