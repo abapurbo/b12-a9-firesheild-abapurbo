@@ -1,0 +1,122 @@
+[
+  {
+    "skillId": 1,
+    "skillName": "Beginner Guitar Lessons",
+    "providerName": "Alex Martin",
+    "providerEmail": "alex@skillswap.com",
+    "price": 20,
+    "rating": 4.8,
+    "slotsAvailable": 3,
+    "description": "Join our beginner-friendly guitar lessons designed for anyone with little or no prior experience. You will learn how to hold a guitar properly, tune it, play basic chords, and strum your first songs within a few weeks. The sessions are fun, interactive, and ideal for anyone wanting to build a strong musical foundation.",
+    "image": "https://i.ibb.co.com/Y76FTGLD/istockphoto-1193517744-612x612.jpg",
+    "category": "Music"
+  },
+  {
+    "skillId": 2,
+    "skillName": "Spoken English Practice",
+    "providerName": "Sara Hossain",
+    "providerEmail": "sara@skillswap.com",
+    "price": 10,
+    "rating": 4.6,
+    "slotsAvailable": 5,
+    "description": "Improve your English fluency with one-on-one conversation practice sessions. These lessons focus on pronunciation, vocabulary, grammar, and confidence building through real-life speaking exercises. Ideal for students, professionals, and anyone preparing for interviews or IELTS speaking tests.",
+    "image": "https://i.ibb.co.com/jknbfPkM/istockphoto-1148744671-612x612.jpg",
+    "category": "Language"
+  },
+  {
+    "skillId": 3,
+    "skillName": "Basic Web Development",
+    "providerName": "Naeem Rahman",
+    "providerEmail": "naeem@skillswap.com",
+    "price": 30,
+    "rating": 4.9,
+    "slotsAvailable": 4,
+    "description": "Kickstart your web development journey by learning the building blocks of the web — HTML, CSS, and JavaScript. This course emphasizes hands-on coding, real-world examples, and small projects to help you understand how websites are structured and styled. Perfect for beginners looking to start a career in tech.",
+    "image": "https://i.ibb.co.com/27xhYdj1/9602bc4b-cfc4-410e-b291-611d478c9d6a.png",
+    "category": "Technology"
+  },
+  {
+    "skillId": 4,
+    "skillName": "Yoga for Beginners",
+    "providerName": "Maya Sen",
+    "providerEmail": "maya@skillswap.com",
+    "price": 15,
+    "rating": 4.7,
+    "slotsAvailable": 7,
+    "description": "Relax your mind and body through gentle yoga postures, breathing exercises, and meditation. This beginner yoga class focuses on flexibility, balance, and stress relief, making it perfect for people of all ages. Each session ends with guided relaxation to leave you feeling refreshed and centered.",
+    "image": "https://i.ibb.co.com/Z1GGYb04/images.jpg",
+    "category": "Health & Fitness"
+  },
+  {
+    "skillId": 5,
+    "skillName": "Watercolor Painting Workshop",
+    "providerName": "Rafi Ahmed",
+    "providerEmail": "rafi@skillswap.com",
+    "price": 25,
+    "rating": 6,
+    "slotsAvailable": 3,
+    "description": "Discover the beauty of watercolor painting through this creative workshop. You will learn how to use brushes, mix colors, create gradients, and paint landscapes or portraits. No prior art experience is required — just bring your enthusiasm and creativity to explore this soothing art form.",
+    "image": "https://i.ibb.co.com/4nrh37z9/images-1.jpg",
+    "category": "Art"
+  },
+  {
+    "skillId": 6,
+    "skillName": "Cooking Bangladeshi Dishes",
+    "providerName": "Sadia Karim",
+    "providerEmail": "sadia@skillswap.com",
+    "price": 18,
+    "rating": 4.9,
+    "slotsAvailable": 2,
+    "description": "Learn to cook authentic Bangladeshi dishes with traditional flavors and modern techniques. From delicious biryani to flavorful curries and sweet pithas, each class will teach you step-by-step preparation methods. Suitable for beginners who love to explore cultural cuisines and home cooking.",
+    "image": "https://i.ibb.co.com/B50KHc28/ehrh.jpg",
+    "category": "Cooking"
+  },
+  {
+    "skillId": 7,
+    "skillName": "Photography Basics",
+    "providerName": "Zahin Chowdhury",
+    "providerEmail": "zahin@skillswap.com",
+    "price": 22,
+    "rating":5,
+    "slotsAvailable": 4,
+    "description": "Unlock the art of photography with practical lessons on camera settings, lighting, and composition. Whether you use a DSLR or smartphone, you’ll learn how to capture stunning photos in natural and artificial light. Includes field practice sessions and creative photo challenges.",
+    "image": "https://i.ibb.co.com/Wm2dcVQ/Photography-for-Beginners.webp",
+    "category": "Photography"
+  },
+  {
+    "skillId": 8,
+    "skillName": "Basic Graphic Design with Canva",
+    "providerName": "Anika Sultana",
+    "providerEmail": "anika@skillswap.com",
+    "price": 12,
+    "rating":6,
+    "slotsAvailable": 5,
+    "description": "Learn how to design beautiful posters, resumes, and social media posts using Canva. This course covers basic color theory, typography, and layout design. No prior experience required — just bring your creativity and start creating designs that stand out.",
+    "image": "https://i.ibb.co.com/S7M8ZjvN/does-canva-take-the-place-of-a-graphic-designer-2022-jpg.jpg",
+    "category": "Design"
+  },
+  {
+    "skillId": 9,
+    "skillName": "Introduction to Coding (Python)",
+    "providerName": "Tanvir Alam",
+    "providerEmail": "tanvir@skillswap.com",
+    "price": 28,
+    "rating":9,
+    "slotsAvailable": 3,
+    "description": "Start your programming journey with Python — one of the most beginner-friendly languages. You’ll learn about variables, loops, conditionals, and problem-solving through mini projects. Ideal for absolute beginners who want to enter the world of software development or data analysis.",
+    "image": "https://i.ibb.co.com/LdtbKRgx/Bundles-To-Master-Python-Programming.jpg",
+    "category": "Technology"
+  },
+  {
+    "skillId": 10,
+    "skillName": "Public Speaking Confidence",
+    "providerName": "Farhana Jahan",
+    "providerEmail": "farhana@skillswap.com",
+    "price": 16,
+    "rating": 4.7,
+    "slotsAvailable": 4,
+    "description": "Overcome stage fear and speak with confidence in front of any audience. This interactive course helps you improve your voice projection, body language, and storytelling techniques through practical exercises. Perfect for students, professionals, and anyone looking to enhance communication skills.",
+    "image": "https://i.ibb.co.com/1GTvHf4P/360-F-607162094-j-Ieu-Cy1blo-Ogl-Po-CSQn-Zy9-YDT6r-WGdng.jpg",
+    "category": "Personal Development"
+  }
+]
