@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import useAuth from "../../Hooks/useAuth";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
-import { toast } from "react-toastify";
 import { useNavigate } from "react-router";
+import toast from "react-hot-toast";
 
 export default function SignUp() {
   const { handleGoogleSignIn, createUser } = useAuth();

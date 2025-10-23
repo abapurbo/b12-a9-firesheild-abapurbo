@@ -11,9 +11,7 @@ const Navbar = () => {
   return (
     <div className="bg-linear-to-br fixed shadow-xl z-50 top-0 left-0  w-full bg-white/75 backdrop-blur-lg">
       <div
-        className="navbar container   mx-auto z-50 md:px-6 px-3 py-3 
-        
-       text-gray-800"
+        className="navbar container   mx-auto z-50 md:px-6 px-3 py-3 text-gray-800"
       >
         {/* Logo Section */}
         <div className="flex-1 flex flex-row items-center  space-x-2 relative">
@@ -32,8 +30,8 @@ const Navbar = () => {
             )}
           </div>
 
-          <Link to='/' className="text-2xl flex items-center "><img className="w-14" src="https://i.ibb.co.com/VcWCWLf5/logo.png" alt="logo" />
-            <h1 className="text-2xl font-extrabold text-indigo-700 tracking-wide">
+          <Link to='/' className="text-2xl flex items-center space-x-0.5 "><img className="w-10" src="https://i.ibb.co.com/KxdHw9XD/skill-Swap-Logo.png" alt="logo" />
+            <h1 className="text-2xl font-semibold text-indigo-700 tracking-widest">
               SkillSwap
             </h1>
           </Link>
@@ -60,7 +58,7 @@ const Navbar = () => {
             to="/"
             className={({ isActive }) =>
               `px-3 py-2 rounded-md font-medium transition ${isActive
-                ? "underline underline-offset-4 font-semibold text-blue-600"
+                ? "font-semibold  text-blue-600"
                 : " hover:text-blue-600"
               }`
             }
@@ -72,7 +70,7 @@ const Navbar = () => {
             to="/profile"
             className={({ isActive }) =>
               `px-3 py-2 rounded-md font-medium transition ${isActive
-                ? "underline underline-offset-4 font-semibold text-blue-600"
+                ? "font-semibold text-blue-600"
                 : "hover:text-blue-600"
               }`
             }
@@ -108,7 +106,7 @@ const Navbar = () => {
                     to="/profile"
                     className={({ isActive }) =>
                       `px-3 py-2 rounded-md font-medium transition ${isActive
-                        ? "underline underline-offset-4 text-blue-600"
+                        ? "text-blue-600"
                         : "hover:bg-gray-200/70 hover:text-blue-600"
                       }`
                     }
@@ -118,7 +116,7 @@ const Navbar = () => {
                   <li>
                     <button
                       onClick={() => logOut()}
-                      className="btn   border-blue-400 text-blue-600 hover:bg-blue-500 hover:text-white transition"
+                      className="btn btn-soft btn-primary  border-4 transition"
                     >
                       Logout
                     </button>
@@ -129,7 +127,7 @@ const Navbar = () => {
 
               <button
                 onClick={() => logOut()}
-                className="btn btn-primary border-blue-400 text-white hover:bg-blue-500 hover:text-white transition"
+                className="btn btn-soft btn-primary transition"
               >
                 Logout
               </button>
@@ -139,9 +137,9 @@ const Navbar = () => {
               <NavLink
                 to="/login"
                 className={({ isActive }) =>
-                  `px-3 py-2 rounded-md font-medium transition ${isActive
-                    ? "underline font-semibold text-blue-600"
-                    : "hover:text-blue-600"
+                  `px-4  py-[2px]  font-medium btn btn-outline btn-primary   transition ${isActive
+                    ? " text-blue-600"
+                    : "hover:text-white"
                   }`
                 }
               >
@@ -150,9 +148,9 @@ const Navbar = () => {
               <NavLink
                 to="/signUp"
                 className={({ isActive }) =>
-                  `px-3 py-2 rounded-md font-medium transition ${isActive
-                    ? "underline font-semibold text-blue-600"
-                    : "hover:text-blue-600"
+                  `px-3 py-2 rounded-md font-medium btn  btn-outline btn-soft btn-primary  transition ${isActive
+                    ? "text-blue-600"
+                    : "hover:text-white"
                   }`
                 }
               >

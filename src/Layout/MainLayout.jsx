@@ -19,7 +19,7 @@ export default function MainLayout() {
       <div className='z-50  h-18'>
         <Navbar></Navbar>
       </div>
-      <div className='z-20 mt-20 bg-linear-to-b from-indigo-50 via-white to-blue-50'>
+      <div className='z-20   bg-[#F9F8FC]'>
         {
           loading ? <Loading></Loading> : <Outlet></Outlet>
         }
@@ -27,7 +27,6 @@ export default function MainLayout() {
       <div>
         <Footer></Footer>
       </div>
-
 
     </div>
   )

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { AuthContext } from '../Context/AuthContext'
 import { createUserWithEmailAndPassword, GoogleAuthProvider, onAuthStateChanged, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from 'firebase/auth';
 import { auth } from '../Config/firebase.config';
-import { ToastContainer } from 'react-toastify';
+import { Toaster } from 'react-hot-toast';
 // google provider
 const googleProvider = new GoogleAuthProvider()
 export default function AuthProvider({ children }) {
@@ -64,7 +64,8 @@ export default function AuthProvider({ children }) {
     return (
         <AuthContext value={authInfo}>
             {children}
-            <ToastContainer />
+            <Toaster/>
+
         </AuthContext>
     )
 }
