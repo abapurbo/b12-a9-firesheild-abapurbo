@@ -4,21 +4,16 @@ import Loading from "../Components/Loading";
 import Home from "../Pages/Home/Home";
 import MyProfile from "../Pages/MyProfile/MyProfile";
 import PrivateRoute from "../Private/PrivateRoute";
+import Login from "../Pages/Login/Login";
+import SignUp from '../Pages/SignUp/SignUp'
 import ForgetPassword from "../Pages/ForgetPassword/ForgetPassword";
-
+import SkillDetailPage from "../Pages/SkillDetailPage/SkillDetailPage";
 const MainLayout = lazy(() => import("../Layout/MainLayout"))
-const ErrorPage = lazy(() => import("../Pages/Error/ErrorPage"))
-const SignUp = lazy(() => import("../Pages/SignUp/SignUp"))
-const Login = lazy(() => import("../Pages/Login/Login"))
-
 const router = createBrowserRouter([
    {
       path: '/',
       element: <Suspense fallback={<Loading />}>
          <MainLayout></MainLayout>
-      </Suspense>,
-      errorElement: <Suspense>
-         <ErrorPage></ErrorPage>
       </Suspense>,
       children: [
          {
@@ -30,25 +25,30 @@ const router = createBrowserRouter([
             element: <PrivateRoute>
                <MyProfile></MyProfile>
             </PrivateRoute>
+         }, {
+            path: '/login', element: <Login></Login>
+
+         },
+         {
+            path: '/signUp', element: <SignUp></SignUp>
+
+
+         }, {
+            path: '/forgetPassword', element: <ForgetPassword></ForgetPassword>
+
+         }, {
+            path: '/skillDetailsPage/:id',
+            loader: () => fetch('/fake_data.json'),
+            element: <PrivateRoute>
+               < SkillDetailPage ></ SkillDetailPage>
+            </PrivateRoute>
          }
       ],
 
    },
-   {
-      path: '/login', element: <Suspense fallback={<Loading />}>
-         <Login></Login>
-      </Suspense>,
-   },
-   {
-      path: '/signUp', element: <Suspense fallback={<Loading />}>
-         <SignUp></SignUp>
-      </Suspense>,
-   },
-   {
-      path: '/forgetPassword', element: <Suspense fallback={<Loading />}>
-         <ForgetPassword></ForgetPassword>
-      </Suspense>,
-   }
+
+
+
 ])
 
 export default router
