@@ -6,31 +6,45 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import './styles.css';
 // import required modules
-import { Pagination } from 'swiper/modules';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import { FaCommentAlt, FaStar, FaUsers } from 'react-icons/fa';
 import { IoBookSharp } from 'react-icons/io5';
 
 export default function Banner() {
     return (
-        <div className='container mx-auto h-full '>
+        <div className='container mx-auto  '>
             <Swiper
                 pagination={{
                     dynamicBullets: true,
+                    clickable: true,
                 }}
-                modules={[Pagination]}
-                className="mySwiper"
+                autoplay={{
+                    delay:4000,
+                    disableOnInteraction: false,
+                }}
+                
+                modules={[Pagination,Autoplay,Navigation]}
+                className="mySwiper "
             >
                 <SwiperSlide>
-                    <div className="flex flex-col-reverse lg:flex-row justify-between items-center px-6 lg:px-10 w-full h-full">
+                    <div className="relative flex flex-col-reverse lg:flex-row justify-between items-center 
+    px-6 lg:px-10 w-full min-h-screen overflow-hidden
+    bg-gradient-to-br from-white via-blue-50 to-purple-50">
+
+                        {/* Decorative blur circles for subtle style */}
+                        <div className="absolute top-10 left-10 w-60 h-60 bg-blue-200/40 blur-3xl rounded-full"></div>
+                        <div className="absolute bottom-10 right-10 w-72 h-72 bg-purple-200/40 blur-3xl rounded-full"></div>
+
                         {/* Left Text Section */}
-                        <div className="flex-1 flex flex-col justify-start items-start gap-6 text-center lg:text-left mt-10 lg:mt-0">
+                        <div className="relative z-10 flex-1 flex flex-col justify-start items-start gap-6 
+      text-center lg:text-left mt-10 lg:mt-0">
                             <p className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
                                 <span className="text-primary">Teach</span> what you know,
                                 <br className="hidden sm:block" />
                                 <span className="text-primary">Learn</span> what you love.
                             </p>
 
-                            <p className="text-gray-600 text-base sm:text-lg">
+                            <p className="text-gray-600 text-base sm:text-lg max-w-xl mx-auto lg:mx-0">
                                 SkillSwap is a smart platform where you can learn new skills by <br className="hidden md:block" />
                                 exchanging what you already know. Grow together through teaching and learning.
                             </p>
@@ -42,18 +56,18 @@ export default function Banner() {
                         </div>
 
                         {/* Right Image Section */}
-                        <div className="flex-1 relative flex justify-center items-center">
+                        <div className="relative z-10 flex-1 flex justify-center items-center">
                             <img
-                                className="h-[300px] sm:h-[400px] lg:h-[500px] object-contain"
+                                className="h-[300px] sm:h-[400px] lg:h-[500px] object-contain drop-shadow-2xl"
                                 src="https://i.ibb.co.com/dJbB9mrB/image.png"
                                 alt="banner image"
                             />
 
                             {/* Card 1 - Active Users */}
                             <div className="absolute flex items-center gap-3 w-[160px] sm:w-[180px] h-[60px] sm:h-[70px] 
-        bg-white/30 border border-white/20 rounded-xl 
-        backdrop-blur-3xl shadow-lg p-4 top-[70%] left-[10%] 
-        hover:bg-white/40 transition-all duration-300">
+      bg-white/30 border border-white/20 rounded-xl 
+      backdrop-blur-3xl shadow-lg p-4 top-[70%] left-[10%] 
+      hover:bg-white/40 transition-all duration-300">
                                 <FaUsers className="text-blue-500 text-2xl sm:text-3xl" />
                                 <div>
                                     <h1 className="text-lg sm:text-xl font-bold text-gray-800">50k+</h1>
@@ -63,9 +77,9 @@ export default function Banner() {
 
                             {/* Card 2 - Skills Shared */}
                             <div className="absolute flex items-center gap-3 w-[160px] sm:w-[180px] h-[60px] sm:h-[70px]
-        bg-white/30 border border-white/20 rounded-xl 
-        backdrop-blur-3xl shadow-lg p-4 top-[15%] left-[10%]
-        hover:bg-white/40 transition-all duration-300">
+      bg-white/30 border border-white/20 rounded-xl 
+      backdrop-blur-3xl shadow-lg p-4 top-[15%] left-[10%]
+      hover:bg-white/40 transition-all duration-300">
                                 <IoBookSharp className="text-primary text-2xl sm:text-3xl" />
                                 <div>
                                     <h1 className="text-lg sm:text-xl font-bold text-gray-800">10k+</h1>
@@ -75,9 +89,9 @@ export default function Banner() {
 
                             {/* Card 3 - Average Rating */}
                             <div className="absolute flex items-center gap-3 w-[160px] sm:w-[180px] h-[60px] sm:h-[70px]
-        bg-white/30 border border-white/20 rounded-xl 
-        backdrop-blur-md shadow-lg p-4 top-[30%] right-[8%]
-        hover:bg-white/40 transition-all duration-300">
+      bg-white/30 border border-white/20 rounded-xl 
+      backdrop-blur-md shadow-lg p-4 top-[30%] right-[8%]
+      hover:bg-white/40 transition-all duration-300">
                                 <FaStar className="text-yellow-400 text-2xl sm:text-3xl drop-shadow-sm" />
                                 <div>
                                     <h1 className="text-lg sm:text-xl font-bold text-gray-800">9.5</h1>
@@ -87,9 +101,9 @@ export default function Banner() {
 
                             {/* Card 4 - Connections Made */}
                             <div className="absolute flex items-center gap-3 w-[160px] sm:w-[180px] h-[60px] sm:h-[70px]
-        bg-white/30 border border-white/20 rounded-xl 
-        backdrop-blur-3xl shadow-lg p-4 bottom-[10%] right-[10%]
-        hover:bg-white/40 transition-all duration-300">
+      bg-white/30 border border-white/20 rounded-xl 
+      backdrop-blur-3xl shadow-lg p-4 bottom-[10%] right-[10%]
+      hover:bg-white/40 transition-all duration-300">
                                 <FaCommentAlt className="text-green-500 text-2xl sm:text-3xl" />
                                 <div>
                                     <h1 className="text-lg sm:text-xl font-bold text-gray-800">100k+</h1>
@@ -99,15 +113,11 @@ export default function Banner() {
                         </div>
                     </div>
 
+
                 </SwiperSlide>
                 <SwiperSlide>Slide 2</SwiperSlide>
                 <SwiperSlide>Slide 3</SwiperSlide>
-                <SwiperSlide>Slide 4</SwiperSlide>
-                <SwiperSlide>Slide 5</SwiperSlide>
-                <SwiperSlide>Slide 6</SwiperSlide>
-                <SwiperSlide>Slide 7</SwiperSlide>
-                <SwiperSlide>Slide 8</SwiperSlide>
-                <SwiperSlide>Slide 9</SwiperSlide>
+              
             </Swiper>
 
         </div>

@@ -15,19 +15,24 @@ export default function MainLayout() {
   }, [location]);
 
   return (
-    <div>
-      <div className='z-50  h-18'>
-        <Navbar></Navbar>
-      </div>
-      <div className='z-20   bg-[#F9F8FC]'>
-        {
-          loading ? <Loading></Loading> : <Outlet></Outlet>
-        }
-      </div>
-      <div>
-        <Footer></Footer>
+    <div className="min-h-screen flex flex-col">
+      {/* Navbar */}
+      <div className="z-50 h-18">
+        <Navbar />
       </div>
 
+      {/* Main Content */}
+      <div
+        className="z-20 grow  bg-linear-to-br from-white via-gray-50 to-blue-50"
+      >
+        {loading ? <Loading /> : <Outlet />}
+      </div>
+
+      {/* Footer */}
+      <div>
+        <Footer />
+      </div>
     </div>
+
   )
 }

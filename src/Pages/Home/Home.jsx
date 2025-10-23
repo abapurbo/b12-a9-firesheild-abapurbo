@@ -6,7 +6,7 @@ export default function Home() {
 
   return (
     <div>
-      <div className='h-[550px] '>
+      <div className='h-[550px] mb-30'>
         <Banner></Banner>
       </div>
       <div className='container mx-auto px-10'>
