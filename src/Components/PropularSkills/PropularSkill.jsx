@@ -18,21 +18,21 @@ export default function PopularSkill({ card }) {
             {/* Content */}
             <div className="card-body p-5 space-y-1">
                 {/* Title */}
-                <h2 className="card-title md:text-2xl text-xl font-semibold text-gray-800 transition-colors duration-300 hover:text-indigo-600 cursor-pointer">
+                <h2 className="card-title flex-1  md:text-2xl text-xl font-semibold text-gray-800 transition-colors duration-300 hover:text-indigo-600 cursor-pointer">
                     {skillName}
                 </h2>
 
                 {/* Rating & Price */}
-                <div className="flex items-center justify-between">
+                <div className="flex  items-center justify-between">
                     <div className="flex items-center gap-1 text-yellow-500">
                         <FaStar className="text-2xl bg-amber-100 p-1 rounded-xl" />
                         <span className="text-gray-700 text-lg font-medium">{rating}</span>
                     </div>
-                    <div className="text-green-500 font-semibold text-2xl">{price}</div>
+                    <div className="text-green-500 font-semibold text-2xl">${price}</div>
                 </div>
                 {/* Button */}
                 <div className="card-actions pt-2">
-                    <button className="btn btn-sm w-full bg-gradient-to-r from-indigo-600 to-blue-500 text-white border-none rounded-lg hover:from-blue-600 hover:to-indigo-700 transition-all">
+                    <button className="btn btn-sm w-full bg-linear-to-r from-indigo-600 to-blue-500 text-white border-none rounded-lg hover:from-blue-600 hover:to-indigo-700 transition-all">
                         View Details
                     </button>
                 </div>
