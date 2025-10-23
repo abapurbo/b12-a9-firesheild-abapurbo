@@ -34,7 +34,7 @@ export default function PopularSkills() {
             </div>
 
             {/* Skills Grid */}
-            <div className="container mx-auto px-4">
+            <div className="container mx-auto md:px-4">
                 <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                    {
                     cards.map((card,index)=><PropularSkill key={index} card={card}></PropularSkill>)

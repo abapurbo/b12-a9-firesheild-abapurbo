@@ -8,16 +8,17 @@ export default function PopularSkill({ card }) {
             {/* Image */}
             <figure className="h-48 w-full overflow-hidden">
                 <img
+                   
                     src={image}
                     alt="Skill"
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full object-center hover:scale-105 transition-transform duration-300"
                 />
             </figure>
 
             {/* Content */}
             <div className="card-body p-5 space-y-1">
                 {/* Title */}
-                <h2 className="card-title text-2xl font-semibold text-gray-800 transition-colors duration-300 hover:text-indigo-600 cursor-pointer">
+                <h2 className="card-title md:text-2xl text-xl font-semibold text-gray-800 transition-colors duration-300 hover:text-indigo-600 cursor-pointer">
                     {skillName}
                 </h2>
 
