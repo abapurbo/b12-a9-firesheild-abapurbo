@@ -49,6 +49,7 @@ export default function Login() {
     loginUser(email, password)
       .then(result => {
         navigate(location.state || '/')
+        e.target.reset()
       })
       .catch((error) => {
         if (error) {

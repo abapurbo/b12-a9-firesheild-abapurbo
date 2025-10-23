@@ -41,7 +41,7 @@ export default function MyProfile() {
     }
   }
   return (
-    <div className="max-h-[1000px] bg-gray-50 flex flex-col">
+    <div className="h-[800px] bg-gray-50 flex flex-col">
       {/* Content */}
       <div className="grow flex flex-col items-center justify-center px-6 py-12">
         <h1 className="text-cyan-700 text-3xl font-semibold tracking-wide mb-8">
