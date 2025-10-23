@@ -1,12 +1,45 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import useAuth from "../../Hooks/useAuth";
+import toast from "react-hot-toast";
 
 export default function MyProfile() {
-  const user = {
-    name: "John Doe",
-    email: "johndoe@example.com",
-    image: "https://i.pravatar.cc/200?img=3",
-  };
+  const { profileUpdate, user } = useAuth()
 
+  const [currentUser, setCurrentUser] = useState(user)
+  const { displayName, email, photoURL } = currentUser
+  useEffect(() => {
+    setCurrentUser({ ...user })
+  }, [user])
+
+  // update profile
+  const handleUpdateProfile = async (e) => {
+    e.preventDefault()
+    const name = e.target.name.value;
+    const image = e.target.image.value;
+    console.log(name, image)
+
+    const dialog = document.getElementById('my_modal_2')
+    if (name && image) {
+      const profile = {
+        displayName: name,
+        photoURL: image,
+      }
+      await profileUpdate(profile)
+      setCurrentUser({
+        ...currentUser,
+        displayName: name,
+        photoURL: image,
+      });
+
+      toast.success('Update your profile successfuly!')
+
+      e.target.reset()
+      dialog.close()
+    }
+    else {
+      toast.error('Please fill up you update profile from')
+    }
+  }
   return (
     <div className="max-h-[1000px] bg-gray-50 flex flex-col">
       {/* Content */}
@@ -18,18 +51,18 @@ export default function MyProfile() {
         <div className="bg-gray-50 max-w-sm w-full rounded-2xl shadow-lg p-10 text-center text-gray-800">
           {/* Profile Image */}
           <img
-            src={user.image}
+            src={photoURL}
             alt="Profile"
             className="w-32 h-32 rounded-full mx-auto mb-8 border-4 border-indigo-500 object-cover shadow-md"
           />
 
           {/* User Info */}
-          <h1 className="text-3xl font-bold mb-2 text-indigo-600">{user.name}</h1>
-          <p className="text-indigo-500 text-lg mb-10 font-light">{user.email}</p>
+          <h1 className="text-3xl font-bold mb-2 text-indigo-600">{displayName}</h1>
+          <p className="text-indigo-500 text-lg mb-10 font-light">{email}</p>
 
           {/* Update Button */}
           <button
-            onClick={()=>document.getElementById('my_modal_2').showModal()}
+            onClick={() => document.getElementById('my_modal_2').showModal()}
             className="bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800 transition-colors duration-200 rounded-full px-12 py-3 font-medium text-white shadow-md shadow-indigo-500/40 focus:outline-none focus:ring-2 focus:ring-indigo-400"
             aria-label="Update Profile"
           >
@@ -54,7 +87,7 @@ export default function MyProfile() {
           </h3>
 
           {/* Form */}
-          <form method="dialog" className="space-y-6">
+          <form onSubmit={handleUpdateProfile} method="dialog" className="space-y-6">
 
             {/* Name Field */}
             <div>
@@ -63,6 +96,7 @@ export default function MyProfile() {
               </label>
               <input
                 type="text"
+                name="name"
                 placeholder="Enter your name"
                 className="input input-bordered w-full focus:outline-none rounded-xl bg-white/70 focus:bg-white focus:ring-2 focus:ring-indigo-500 transition-all"
                 required
@@ -75,7 +109,8 @@ export default function MyProfile() {
                 Photo URL
               </label>
               <input
-                type="text"
+                type="url"
+                name="image"
                 placeholder="Enter your photo URL"
                 className="input input-bordered w-full focus:outline-none rounded-xl bg-white/70 focus:bg-white focus:ring-2 focus:ring-indigo-500 transition-all"
                 required
@@ -85,6 +120,7 @@ export default function MyProfile() {
             {/* Save Button */}
             <div className="pt-4 flex justify-center">
               <button
+                method="dialog"
                 type="submit"
                 className="px-8 py-3 bg-indigo-600 text-white font-semibold rounded-xl shadow-lg hover:bg-indigo-700 hover:shadow-xl active:scale-95 transition-all duration-200"
               >

@@ -7,7 +7,6 @@ const Navbar = () => {
   const { user, logOut } = useAuth();
   const [icon, setIcon] = useState(true)
   const [open, setOpen] = useState(false)
-  console.log(icon)
   return (
     <div className="bg-linear-to-br fixed shadow-xl z-50 top-0 left-0  w-full bg-white/75 backdrop-blur-lg">
       <div
@@ -94,8 +93,7 @@ const Navbar = () => {
                   <div className="w-10 rounded-full">
                     <img
                       src={
-                        user.photoURL ||
-                        "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                        user.photoURL
                       }
                       alt="User Avatar"
                     />

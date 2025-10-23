@@ -7,10 +7,7 @@ import { Toaster } from 'react-hot-toast';
 const googleProvider = new GoogleAuthProvider()
 export default function AuthProvider({ children }) {
     const [loading, setLoading] = useState(true);
-    const [user, setUser] = useState({
-        displayName: 'apurbo'
-    });
-
+    const [user, setUser] = useState(null);
     console.log(user)
     //observe user in my web site 
     useEffect(() => {
@@ -33,8 +30,10 @@ export default function AuthProvider({ children }) {
         return signInWithEmailAndPassword(auth, email, password);
     }
     // user update profile
-    const profileUpdate = (profile) => {
-        return updateProfile(auth.currentUser, profile)
+    const profileUpdate = async (profile) => {
+        await updateProfile(auth.currentUser, profile);
+        await auth.currentUser.reload()
+        setUser({ ...auth.currentUser })
     }
     // reset password
     const resetPassword = (email) => {
@@ -49,7 +48,6 @@ export default function AuthProvider({ children }) {
         return signInWithPopup(auth, googleProvider)
 
     }
-
     const authInfo = {
         user,
         loading,
@@ -57,14 +55,14 @@ export default function AuthProvider({ children }) {
         loginUser,
         profileUpdate,
         logOut,
-        resetPassword ,
+        resetPassword,
         handleGoogleSignIn
 
     }
     return (
         <AuthContext value={authInfo}>
             {children}
-            <Toaster/>
+            <Toaster />
 
         </AuthContext>
     )
