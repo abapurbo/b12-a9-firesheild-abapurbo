@@ -148,12 +148,11 @@ export default function Banner() {
                         {/* Left Text Section */}
                         <div className="relative z-10 flex-1 flex flex-col justify-start items-center  md:justify-start md:items-start gap-6 text-center lg:text-left  lg:mt-0">
                             <p className="text-[26px] md:text-start text-center sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-                                Learn a New Skill <br  />Today
+                                Learn a New Skill <br />Today
                             </p>
 
                             <p className="text-gray-600 md:text-start text-center text-base text-lg max-w-xl mx-auto lg:mx-0">
-                                Discover real people sharing real skills—
-                                from cooking<br className="break hidden md:block" /> to coding, and everything in between.
+                                Discover real people sharing real skills—from cooking<br/> to coding, and everything in between.
                             </p>
 
                             <div className="flex  justify-center lg:justify-start gap-4">
