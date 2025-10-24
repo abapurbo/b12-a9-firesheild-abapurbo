@@ -142,8 +142,8 @@ Encourages new users to join and share their own experience.
 ---
 
 ## My project repo and live link 
-- **Github Repo Link:** (https://b12-a9-firesheild-abapurbo.web.app/)
-- **Live Link:** (https://b12-a9-firesheild-abapurbo.web.app/)
+- [🔴 Github repo link](https://github.com/abapurbo/b12-a9-firesheild-abapurbo)
+- [🔴 Live Site](https://b12-a9-firesheild-abapurbo.web.app/)
 
 ---
 
