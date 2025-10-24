@@ -3,47 +3,40 @@ import { FaStar } from "react-icons/fa";
 import { Link } from "react-router";
 
 export default function PopularSkill({ card }) {
-    const {skillId, image, skillName, rating, price, providerName } = card || {};
+    const { skillId, image, skillName, rating, price, providerName } = card || {};
 
     return (
-        <div className="card bg-white border border-gray-100 shadow-md hover:shadow-xl rounded-xl overflow-hidden transition-all duration-300">
-            {/* Image */}
-            <figure className="h-48 w-full overflow-hidden">
-                <img
-                    src={image}
-                    alt={skillName || "Skill"}
-                    className="w-full h-full object-center hover:scale-105 transition-transform duration-300"
-                />
-            </figure>
 
-            {/* Content */}
-            <div className="card-body p-5 space-y-1">
-                {/* Skill Name */}
-                <h2 className="card-title flex-1 md:text-xl text-xl font-semibold text-gray-800 transition-colors duration-300 hover:text-indigo-600 cursor-pointer">
-                    {skillName}
-                </h2>
+        <div>
+            <div className="card cursor-pointer bg-base-100 w-full  max-w-[346px] h-[400px]  shadow-xl p-3.5 transition hover:scale-95 duration-500">
+                <figure className="flex-1">
+                    <img className='w-full h-[200px]  object-center'
+                        src={image}
+                        alt={skillName} />
+                </figure>
 
-                {/* Provider Name */}
-                <p className="text-gray-600 italic text-sm mt-[-6px] mb-2">
-                    <span className="font-semibold text-gray-400">{providerName}</span>
-                </p>
-
-                {/* Rating & Price */}
-                <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-1 text-yellow-500">
-                        <FaStar className="text-2xl bg-amber-100 p-1 rounded-xl" />
-                        <span className="text-gray-700 text-lg font-medium">{rating}</span>
+                <div className="flex-1 flex flex-col justify-start ">
+                    <div className='flex-1 mt-3'>
+                        <h2 className="card-title">{skillName}</h2>
+                        <p className="text-gray-400">{providerName}</p>
                     </div>
-                    <div className="text-green-500 font-semibold text-2xl">${price}</div>
+                    {/* Rating & Price */}
+                    <div className=" flex items-center justify-between mt-3">
+                        <div className="flex items-center gap-1 text-yellow-500">
+                            <FaStar className="text-2xl bg-amber-100 p-1 rounded-xl" />
+                            <span className="text-gray-700 text-lg font-medium">{rating}</span>
+                        </div>
+                        <div className="text-green-500 font-semibold text-xl">${price}</div>
+                    </div>
+                    <div className="card-actions justify-between mt-4 ">
+                        <Link to={`/skillDetailsPage/${skillId}`} className="btn btn-soft btn-primary text-sm">
+                            View Details
+                        </Link>
+                    </div>
                 </div>
 
-                {/* Button */}
-                <div className="card-actions justify-end pt-2">
-                    <Link to={`/skillDetailsPage/${skillId}`} className="btn  btn-soft btn-primary">
-                        View Details
-                    </Link>
-                </div>
             </div>
+
         </div>
     );
 }

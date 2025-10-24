@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate, useLocation, useLoaderData, useParams } from "react-router";
+import {  useLoaderData, useParams } from "react-router";
 import toast from "react-hot-toast";
 import { FaEnvelope, FaUserTie, FaTag, FaUsers, FaStar } from "react-icons/fa";
 import InfoBox from "../../Components/InfoBox";
@@ -7,8 +7,6 @@ import InfoBox from "../../Components/InfoBox";
 export default function SkillDetailPage() {
   const cards = useLoaderData();
   const { id } = useParams();
-  const navigate = useNavigate();
-  const location = useLocation();
 
   const [detailsCard, setDetailsCard] = useState({});
   const [formData, setFormData] = useState({ name: "", email: "" });
@@ -17,6 +15,9 @@ export default function SkillDetailPage() {
     const currentCard = cards.find((card) => card?.skillId == id);
     setDetailsCard(currentCard);
   }, [cards, id]);
+
+  // Initialize AOS
+ 
 
   const {
     image,
@@ -43,7 +44,7 @@ export default function SkillDetailPage() {
 
   return (
     <div className="max-w-7xl mx-auto my-16 px-6 lg:px-10 font-inter">
-      <div className="relative bg-gradient-to-br from-white via-indigo-50 to-blue-100 rounded-3xl border border-indigo-100 shadow-lg hover:shadow-2xl hover:border-indigo-200 transition-all duration-500 overflow-hidden">
+      <div  className="relative bg-gradient-to-br from-white via-indigo-50 to-blue-100 rounded-3xl border border-indigo-100 shadow-lg hover:shadow-2xl hover:border-indigo-200 transition-all duration-500 overflow-hidden">
         <div className="flex flex-col md:flex-row items-center md:items-stretch gap-10 p-8 md:p-10">
 
           {/* ===== Left Image Section ===== */}
@@ -54,7 +55,7 @@ export default function SkillDetailPage() {
               className="w-full h-full object-cover rounded-2xl transform group-hover:scale-105 transition-transform duration-700 ease-out shadow-lg"
             />
 
-            
+
 
             {/* Overlay Gradient */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl" />
@@ -109,7 +110,7 @@ export default function SkillDetailPage() {
 
 
       {/* Book Session Form  */}
-      <div className="mt-20 bg-gradient-to-br from-indigo-50 via-blue-50 to-purple-50 shadow-xl rounded-3xl p-10 md:p-14 border border-blue-100">
+      <div  className="mt-20 bg-gradient-to-br from-indigo-50 via-blue-50 to-purple-50 shadow-xl rounded-3xl p-10 md:p-14 border border-blue-100">
         <h2 className="text-3xl md:text-4xl font-extrabold text-center text-gray-900 mb-10 flex items-center justify-center gap-2">
           <span className="text-indigo-600 text-4xl">📅</span> Book a Session
         </h2>
