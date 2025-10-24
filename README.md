@@ -136,6 +136,7 @@ Encourages new users to join and share their own experience.
 - **Firebase Auth**
 - **TailwindCSS + DaisyUI**
 - **AOS**
+- **Swiper**
 - **React Hot Toast**
 - **React Router DOM**
 
