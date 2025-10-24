@@ -18,7 +18,7 @@ export default function ForgetPassword() {
         e.preventDefault();
         resetPassword(email)
             .then(() => {
-                window.location.href = "https://mail.google.com";
+                window.location.href = "https://mail.google.com/mail/u/0/#inbox";
 
             })
     };

@@ -15,7 +15,6 @@ export default function PopularSkills() {
         const data = await res.json();
         setCards(data);
 
-        // Wait a tick and refresh AOS after data loaded
         setTimeout(() => {
           AOS.refreshHard();
         }, 300);

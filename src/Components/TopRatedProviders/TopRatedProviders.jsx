@@ -13,25 +13,6 @@ export default function TopRatedProviders() {
             .then(data => setTopProviders(data))
     }, [])
 
-    // Fetch data
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const res = await fetch("/fake_data.json");
-                const data = await res.json();
-                setCards(data);
-
-                // Wait a tick and refresh AOS after data loaded
-                setTimeout(() => {
-                    AOS.refreshHard();
-                }, 300);
-            } catch (error) {
-                console.error(error);
-            }
-        };
-        fetchData();
-    }, []);
-
     // Initialize AOS
     useEffect(() => {
         AOS.init({

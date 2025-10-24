@@ -29,23 +29,41 @@ const Navbar = () => {
             )}
           </div>
 
-          <Link to='/' className="text-2xl flex items-center space-x-0.5 "><img className="w-10" src="https://i.ibb.co.com/KxdHw9XD/skill-Swap-Logo.png" alt="logo" />
-            <h1 className="text-2xl font-semibold text-indigo-700 tracking-widest">
+          <Link to='/' className="text-2xl flex items-center space-x-0.5 "><img className="md:w-10 w-8" src="https://i.ibb.co.com/KxdHw9XD/skill-Swap-Logo.png" alt="logo" />
+            <h1 className="md:text-2xl text-[23px] font-semibold text-indigo-700 tracking-widest">
               SkillSwap
             </h1>
           </Link>
           {/* Dropdown Items */}
           {open && (
-            <ul className="absolute left-0 top-9 bg-base-100 rounded-box z-50 w-40 p-2 shadow-lg border border-gray-200">
+            <ul className="absolute space-y-3 left-0 top-9 bg-base-100 rounded-box z-50 w-40 p-2 shadow-lg border border-gray-200">
               <li>
-                <a className="block px-3 py-2 rounded-md hover:bg-gray-100 cursor-pointer">
-                  Item 1
-                </a>
+                <NavLink
+                  to="/"
+                  className={({ isActive }) =>
+                    `px-3 py-2 rounded-md font-medium transition ${isActive
+                      ? "font-semibold  text-blue-600"
+                      : " hover:text-blue-600"
+                    }`
+                  }
+                >
+                  Home
+                </NavLink>
+
+
               </li>
               <li>
-                <a className="block px-3 py-2 rounded-md hover:bg-gray-100 cursor-pointer">
-                  Item 2
-                </a>
+                <NavLink
+                  to="/profile"
+                  className={({ isActive }) =>
+                    `px-3 py-2 rounded-md font-medium transition ${isActive
+                      ? "font-semibold text-blue-600"
+                      : "hover:text-blue-600"
+                    }`
+                  }
+                >
+                  My Profile
+                </NavLink>
               </li>
             </ul>
           )}
@@ -87,7 +105,7 @@ const Navbar = () => {
                 <div
                   tabIndex={0}
                   role="button"
-                  className="btn btn-ghost btn-circle tooltip tooltip-bottom avatar border border-gray-300 hover:scale-105 transition"
+                  className="btn btn-ghost btn-circle tooltip md:tooltip-bottom tooltip-left  avatar border border-gray-300 hover:scale-105 transition"
                   data-tip={user.displayName}
                 >
                   <div className="w-10 rounded-full">
@@ -105,7 +123,7 @@ const Navbar = () => {
                     className={({ isActive }) =>
                       `px-3 py-2 rounded-md font-medium transition ${isActive
                         ? "text-blue-600"
-                        : "hover:bg-gray-200/70 hover:text-blue-600"
+                        : " hover:text-blue-600"
                       }`
                     }
                   >
@@ -125,7 +143,7 @@ const Navbar = () => {
 
               <button
                 onClick={() => logOut()}
-                className="btn btn-soft btn-primary transition"
+                className="btn btn-soft hidden md:block btn-primary transition"
               >
                 Logout
               </button>
