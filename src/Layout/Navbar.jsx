@@ -15,29 +15,9 @@ const Navbar = () => {
         {/* Logo Section */}
         <div className="flex-1 flex flex-row items-center  space-x-2 relative">
 
-          <div
-            onClick={() => {
-              setIcon(!icon);
-              setOpen(!open);
-            }}
-            className="cursor-pointer md:hidden rounded-md hover:bg-gray-200 transition"
-          >
-            {icon ? (
-              <IoMdMenu className="text-2xl text-gray-700" />
-            ) : (
-              <IoMdClose className="text-2xl text-gray-700" />
-            )}
-          </div>
-
-          <Link to='/' className="text-2xl flex items-center space-x-0.5 "><img className="md:w-10 w-8" src="https://i.ibb.co.com/KxdHw9XD/skill-Swap-Logo.png" alt="logo" />
-            <h1 className="md:text-2xl text-[23px] font-semibold text-indigo-700 tracking-widest">
-              SkillSwap
-            </h1>
-          </Link>
-          {/* Dropdown Items */}
-          {open && (
-            <ul className="absolute flex flex-col justify-center space-y-3 left-0 top-9 bg-base-100 rounded-box z-50 w-40 p-2 shadow-lg border border-gray-200">
-
+          <div className="dropdown dropdown-end">
+            <div tabIndex={0} role="button" className="md:hidden m-1"><IoMdMenu className="text-3xl" /></div>
+            <ul tabIndex="-1" className="dropdown-content menu left-1 bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
               <li>
                 <NavLink
                   to="/"
@@ -59,43 +39,15 @@ const Navbar = () => {
                   My Profile
                 </NavLink>
               </li>
-
-              {user ? (
-                <li>
-                  <button
-                    onClick={() => logOut()}
-                    className="btn btn-soft btn-primary border-4 transition w-full"
-                  >
-                    Logout
-                  </button>
-                </li>
-              ) : (
-                <>
-                  <li>
-                    <NavLink
-                      to="/login"
-                      className={({ isActive }) =>
-                        `px-3 py-2 rounded-md font-medium transition ${isActive ? "text-blue-600" : "hover:text-blue-600"}`
-                      }
-                    >
-                      Login
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink
-                      to="/signUp"
-                      className={({ isActive }) =>
-                        `px-3 py-2 rounded-md font-medium transition ${isActive ? "text-blue-600" : "hover:text-blue-600"}`
-                      }
-                    >
-                      Sign Up
-                    </NavLink>
-                  </li>
-                </>
-              )}
             </ul>
-          )}
+          </div>
 
+          <Link to='/' className="text-2xl flex items-center space-x-0.5 "><img className="md:w-10 w-8" src="https://i.ibb.co.com/KxdHw9XD/skill-Swap-Logo.png" alt="logo" />
+            <h1 className="md:text-2xl text-[23px] font-semibold text-indigo-700 tracking-widest">
+              SkillSwap
+            </h1>
+          </Link>
+       
         </div>
 
         {/* Nav Links */}
@@ -178,13 +130,13 @@ const Navbar = () => {
               </button>
             </>
           ) : (
-            <div div className="hidden md:block  space-x-3">
+            <>
               <NavLink
                 to="/login"
                 className={({ isActive }) =>
-                  `px-4  py-[2px]  font-medium  btn btn-outline btn-primary   transition ${isActive
-                    ? " text-blue-600"
-                    : "hover:text-white"
+                  `px-4 font-medium  btn    transition ${isActive
+                    ? "btn-primary text-white"
+                    : "btn-outline btn-primary hover:text-white"
                   }`
                 }
               >
@@ -193,15 +145,15 @@ const Navbar = () => {
               <NavLink
                 to="/signUp"
                 className={({ isActive }) =>
-                  `px-3 py-2 rounded-md font-medium btn  btn-outline btn-soft btn-primary  transition ${isActive
-                    ? "text-blue-600"
-                    : "hover:text-white"
+                  `px-3 py-2 rounded-md hidden md:block font-medium btn    transition ${isActive
+                    ? "btn-primary text-white"
+                    : "btn-outline btn-primary hover:text-white"
                   }`
                 }
               >
                 Sign Up
               </NavLink>
-            </div>
+            </>
           )}
         </div>
       </div>
