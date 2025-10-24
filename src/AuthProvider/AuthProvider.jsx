@@ -17,7 +17,7 @@ export default function AuthProvider({ children }) {
         })
         return () => unSubscribe()
     }, [])
-
+    console.log(user)
     // create user
     const createUser = (email, password) => {
         setLoading(true)

@@ -6,7 +6,7 @@ import { useNavigate } from "react-router";
 import toast from "react-hot-toast";
 
 export default function SignUp() {
-  const { handleGoogleSignIn, createUser } = useAuth();
+  const { handleGoogleSignIn, createUser, profileUpdate } = useAuth();
   const [show, setShow] = useState(true)
   const navigate = useNavigate()
 
@@ -47,9 +47,13 @@ export default function SignUp() {
       return;
     }
 
-
+    const profile = {
+      displayName: name,
+      photoURL: photo
+    }
     createUser(email, password)
       .then((result) => {
+        profileUpdate(profile)
         // console.log(result.user)
         navigate('/')
       })
@@ -70,7 +74,7 @@ export default function SignUp() {
     <div className="min-h-screen bg-linear-to-br from-indigo-50 via-white to-sky-100 flex items-center justify-center px-4 py-10">
       <div className="max-w-5xl w-full grid md:grid-cols-2 bg-white/80 backdrop-blur-xl shadow-2xl rounded-3xl overflow-hidden border border-indigo-100">
         <title>
-           SkillSwap || Sign Up
+          SkillSwap || Sign Up
         </title>
         <div className="hidden md:flex flex-col justify-center items-center bg-linear-to-br from-indigo-700 via-blue-600 to-cyan-500 text-white p-10 relative overflow-hidden">
           <h1 className="text-5xl font-extrabold mb-4">

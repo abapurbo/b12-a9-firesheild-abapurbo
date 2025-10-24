@@ -34,7 +34,8 @@ const router = createBrowserRouter([
 
 
          }, {
-            path: '/forgetPassword', element: <ForgetPassword></ForgetPassword>
+            path: '/forgetPassword', element:<ForgetPassword></ForgetPassword>
+   
 
          }, {
             path: '/skillDetailsPage/:id',
