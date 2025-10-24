@@ -36,7 +36,7 @@ export default function PopularSkills() {
   }, []);
 
   return (
-    <section className="py-20">
+    <section className="py-20 ">
       {/* Section Header */}
       <div data-aos="fade-up" className="text-center mb-14">
         <h2 className="text-3xl md:text-5xl font-bold text-gray-800">

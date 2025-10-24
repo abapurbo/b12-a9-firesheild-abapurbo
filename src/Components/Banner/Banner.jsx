@@ -29,7 +29,7 @@ export default function Banner() {
             >
                 <SwiperSlide>
                     <div
-                        className="relative flex flex-col-reverse lg:flex-row justify-between items-center 
+                        className="relative h-full flex flex-col-reverse lg:flex-row justify-between items-center 
       px-6 lg:px-10 w-full min-h-screen overflow-hidden
       bg-gradient-to-br from-white via-blue-50 to-purple-50"
                     >
@@ -41,13 +41,13 @@ export default function Banner() {
                         <div
                             className="relative  z-10 flex-1 flex flex-col md:justify-start justify-start items-center  md:items-start gap-6 text-center lg:text-left  lg:mt-0"
                         >
-                            <p className="text-2xl mt-6 md:mt-auto sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+                            <p className="text-2xl md:text-start sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
                                 <span className="text-primary">Teach</span> what you know,
-                                <br  />
+                                <br  className='break'/>
                                 <span className="text-primary">Learn</span> what you love.
                             </p>
 
-                            <p className="text-gray-600 text-base sm:text-lg max-w-xl mx-auto lg:mx-0">
+                            <p className="text-gray-600 text-base md:text-start  sm:text-lg max-w-xl mx-auto lg:mx-0">
                                 SkillSwap is a smart platform where you can learn new skills by{" "}
                                 <br className="hidden md:block" />
                                 exchanging what you already know. Grow together through teaching and
@@ -137,8 +137,8 @@ export default function Banner() {
 
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className="relative flex flex-col-reverse lg:flex-row justify-between items-center 
-    px-6 lg:px-10 w-full min-h-screen overflow-hidden
+                    <div className="relative h-full flex flex-col-reverse lg:flex-row justify-between items-center 
+    px-6 lg:px-10  w-full min-h-screen overflow-hidden
     bg-gradient-to-br from-white via-blue-50 to-purple-50">
 
                         {/* Decorative blur circles for subtle style */}
@@ -147,13 +147,13 @@ export default function Banner() {
 
                         {/* Left Text Section */}
                         <div className="relative z-10 flex-1 flex flex-col justify-start items-center  md:justify-start md:items-start gap-6 text-center lg:text-left  lg:mt-0">
-                            <p  className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-                                Learn a New Skill <br className="hidden md:block" />Today
+                            <p  className="text-3xl md:text-start text-center sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+                                Learn a New Skill <br className="break hidden md:block" />Today
                             </p>
 
-                            <p className="text-gray-600 text-base text-lg max-w-xl mx-auto lg:mx-0">
+                            <p className="text-gray-600 md:text-start text-center text-base text-lg max-w-xl mx-auto lg:mx-0">
                                 Discover real people sharing real skills—
-                                from cooking<br className="hidden md:block" /> to coding, and everything in between.
+                                from cooking<br className="break hidden md:block" /> to coding, and everything in between.
                             </p>
 
                             <div className="flex  justify-center lg:justify-start gap-4">
@@ -168,13 +168,13 @@ export default function Banner() {
 
 
                         {/* Right Image Section */}
-                        <div className="relative w-[400px] md:w-auto z-10 flex-1 flex justify-center items-center">
+                        <div className="relative w-[400px] mt md:w-auto z-10 flex-1 flex justify-center items-center">
                             <Lottie animationData={learing} loop={true} />
 
                         </div>
                     </div>
                 </SwiperSlide>
-                <SwiperSlide> <div className="relative flex flex-col-reverse lg:flex-row justify-between items-center 
+                <SwiperSlide> <div className="relative h-full flex flex-col-reverse lg:flex-row justify-between items-center 
     px-6 lg:px-10 w-full min-h-screen overflow-hidden
     bg-gradient-to-br from-white via-blue-50 to-purple-50">
 
@@ -185,12 +185,12 @@ export default function Banner() {
                     {/* Left Text Section */}
                     <div className="relative z-10 flex-1 flex flex-col justify-start items-center   md:items-start gap-6 
       text-center lg:text-left mt-10 lg:mt-0">
-                        <p className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-                            SkillSwap - Learn, Teach,<br className='hidden md:block' />Gorw Togeether
+                        <p className="text-3xl md:text-start text-center sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+                            SkillSwap - Learn, Teach,<br className='break hidden  md:block' />Gorw Togeether
                         </p>
 
                         <p className="text-gray-600 text-base sm:text-lg max-w-xl mx-auto lg:mx-0">
-                            SkillSwap is a people-powered skill-sharing platform <br className="hidden md:block" />
+                            SkillSwap is a people-powered skill-sharing platform <br className="break hidden md:block" />
                             where anyone can be both a learner and a mentor.
                         </p>
 
@@ -204,7 +204,7 @@ export default function Banner() {
                     {/* Right Image Section */}
                     <div className="relative z-10  flex-1 flex justify-center items-center">
                         <img
-                            className="h-[400px]  md:h-[500px] object-contain drop-shadow-2xl"
+                            className="h-[300px]  md:h-[500px] object-contain drop-shadow-2xl"
                             src="https://i.ibb.co.com/gZV03xj4/Screenshot-2025-10-23-155900-removebg-preview.png"
                             alt="banner image"
                         />

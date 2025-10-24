@@ -8,7 +8,7 @@ export default function Home() {
 
   return (
     <div>
-      <div className='md:h-[550px]  md:mb-30 '>
+      <div>
         <Banner></Banner>
         <MarqueeNotice></MarqueeNotice>
       </div>

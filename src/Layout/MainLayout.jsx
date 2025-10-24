@@ -17,13 +17,13 @@ export default function MainLayout() {
   return (
     <div className="min-h-screen flex flex-col">
       {/* Navbar */}
-      <div className="z-50 h-18">
+      <div className="z-50 h-16">
         <Navbar />
       </div>
 
       {/* Main Content */}
       <div
-        className="z-20 grow  bg-linear-to-br from-white via-gray-50 to-blue-50"
+        className="z-20 grow  bg-linear-to-br from-white via-gray-50 to-blue-50 "
       >
         {loading ? <Loading /> : <Outlet />}
       </div>

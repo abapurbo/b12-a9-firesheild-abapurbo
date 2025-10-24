@@ -54,10 +54,10 @@ export default function SkillDetailPage() {
   return (
     <div className="max-w-7xl mx-auto my-16 px-6 lg:px-10 font-inter">
       <div data-aos="fade-up"  data-aos-offset="50" className="relative bg-gradient-to-br from-white via-indigo-50 to-blue-100 rounded-3xl border border-indigo-100 shadow-lg hover:shadow-2xl hover:border-indigo-200 transition-all duration-500 overflow-hidden">
-        <div className="flex flex-col md:flex-row items-center md:items-stretch gap-10 p-4 md:p-10">
+        <div className="flex flex-col lg:flex-row items-center md:items-stretch gap-10 p-4 md:p-10">
 
           {/* ===== Left Image Section ===== */}
-          <div className="md:w-1/2  ounded-2xl">
+          <div className="flex-1 ounded-2xl">
             <img
               src={image}
               alt={skillName}
@@ -71,10 +71,10 @@ export default function SkillDetailPage() {
           </div>
 
           {/* ===== Right Content Section ===== */}
-          <div className="md:w-1/2 flex flex-col justify-between space-y-3">
+          <div className="flex-1 flex flex-col  justify-between space-y-3">
             {/* Title + Description */}
             <div>
-              <h1 className="text-4xl font-extrabold bg-gradient-to-r from-indigo-700 to-blue-600 bg-clip-text text-transparent leading-snug mb-3">
+              <h1 className="text-2xl md:text-4xl font-extrabold bg-gradient-to-r from-indigo-700 to-blue-600 bg-clip-text text-transparent leading-snug mb-3">
                 {skillName}
               </h1>
               <p className="text-gray-700 leading-relaxed text-[15px]">
@@ -119,14 +119,14 @@ export default function SkillDetailPage() {
 
 
       {/* Book Session Form  */}
-      <div  data-aos='fade-up'  data-aos-offset="50" className="mt-20 bg-gradient-to-br from-indigo-50 via-blue-50 to-purple-50 shadow-xl rounded-3xl p-10 md:p-14 border border-blue-100">
-        <h2 className="text-3xl md:text-4xl font-extrabold text-center text-gray-900 mb-10 flex items-center justify-center gap-2">
+      <div  data-aos='fade-up'  data-aos-offset="50" className="mt-20 bg-gradient-to-br from-indigo-50 via-blue-50 to-purple-50 shadow-xl rounded-3xl p-6 md:p-14 border border-blue-100">
+        <h2 className="text-3xl  md:text-4xl font-extrabold text-center text-gray-900 mb-10 flex flex-col md:flex-row items-center justify-center gap-2">
           <span className="text-indigo-600 text-4xl">📅</span> Book a Session
         </h2>
 
         <form
           onSubmit={handleSubmit}
-          className="max-w-2xl mx-auto bg-white/70 backdrop-blur-lg shadow-md rounded-2xl p-8 md:p-10 border border-gray-200 hover:shadow-lg transition-all duration-300"
+          className="max-w-2xl mx-auto bg-white/70 backdrop-blur-lg shadow-md rounded-2xl p-6 md:p-10 border border-gray-200 hover:shadow-lg transition-all duration-300"
         >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
             <div className="flex flex-col">

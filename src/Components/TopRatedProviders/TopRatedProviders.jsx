@@ -23,10 +23,10 @@ export default function TopRatedProviders() {
         });
     }, []);
     return (
-        <section className="py-10 mb-10 bg-gray-50">
+        <section className="py-10 container mx-auto px-10 mb-10 bg-gray-50">
             {/* ===== Top Rated Providers ===== */}
             <div data-aos='fade-up' className="text-center mb-14">
-                <h2 className="text-4xl md:text-5xl font-bold text-gray-800">
+                <h2 className="text-[32px] md:text-5xl font-bold  text-gray-800">
                     Top Rated <span className="text-indigo-600">Providers</span>
                 </h2>
                 <p className="text-gray-600 mt-4 max-w-2xl mx-auto text-base md:text-lg leading-relaxed">
@@ -35,7 +35,7 @@ export default function TopRatedProviders() {
             </div>
 
             {/* Providers Grid */}
-            <div className="container mx-auto px-10">
+            <div >
                 <div data-aos="fade-up"
                     className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 transition-transform">
                     {
