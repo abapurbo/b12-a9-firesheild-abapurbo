@@ -178,11 +178,11 @@ const Navbar = () => {
               </button>
             </>
           ) : (
-            <>
+            <div div className="hidden md:block  space-x-3">
               <NavLink
                 to="/login"
                 className={({ isActive }) =>
-                  `px-4  py-[2px]  font-medium btn btn-outline btn-primary   transition ${isActive
+                  `px-4  py-[2px]  font-medium  btn btn-outline btn-primary   transition ${isActive
                     ? " text-blue-600"
                     : "hover:text-white"
                   }`
@@ -201,7 +201,7 @@ const Navbar = () => {
               >
                 Sign Up
               </NavLink>
-            </>
+            </div>
           )}
         </div>
       </div>

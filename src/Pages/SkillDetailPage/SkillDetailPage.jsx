@@ -23,7 +23,7 @@ export default function SkillDetailPage() {
          AOS.init({
              duration: 1000,
              easing: "ease-in-out",
-             once: false,
+             once:true,
              mirror: true,
          });
      }, []);
@@ -55,7 +55,9 @@ export default function SkillDetailPage() {
     <div className="max-w-7xl mx-auto my-16 px-6 lg:px-10 font-inter">
       <div data-aos="fade-up"  data-aos-offset="50" className="relative bg-gradient-to-br from-white via-indigo-50 to-blue-100 rounded-3xl border border-indigo-100 shadow-lg hover:shadow-2xl hover:border-indigo-200 transition-all duration-500 overflow-hidden">
         <div className="flex flex-col lg:flex-row items-center md:items-stretch gap-10 p-4 md:p-10">
-
+          <title>
+            SkillSwap || SkillDetailsPage
+          </title>
           {/* ===== Left Image Section ===== */}
           <div className="flex-1 ounded-2xl">
             <img

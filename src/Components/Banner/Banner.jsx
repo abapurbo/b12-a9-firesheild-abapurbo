@@ -74,8 +74,8 @@ export default function Banner() {
 
                             {/* === Card 1 - Active Users === */}
                             <div
-                                className="absolute flex items-center gap-3 w-[130px] sm:w-[160px] md:w-[180px] 
-          h-[55px] sm:h-[65px] bg-white/30 border border-white/20 rounded-xl 
+                                className="absolute  flex items-center gap-3 w-[140px] sm:w-[160px] md:w-[180px] 
+          h-[55px] sm:h-[65px] bg-white/30   rounded-xl 
           backdrop-blur-3xl shadow-lg p-3 sm:p-4 
           top-[68%] left-[5%] sm:left-[10%] 
           hover:bg-white/40 transition-all duration-300"
@@ -89,10 +89,10 @@ export default function Banner() {
 
                             {/* === Card 2 - Skills Shared === */}
                             <div
-                                className="absolute flex items-center gap-3 w-[130px] sm:w-[160px] md:w-[180px] 
+                                className="absolute flex items-center gap-3 w-[140px] sm:w-[160px] md:w-[180px] 
           h-[55px] sm:h-[65px] bg-white/30 border border-white/20 rounded-xl 
           backdrop-blur-3xl shadow-lg p-3 sm:p-4 
-          top-[10%] left-[5%] sm:left-[10%] 
+          top-[10%] left-[3%] sm:left-[10%] 
           hover:bg-white/40 transition-all duration-300"
                             >
                                 <IoBookSharp className="text-primary text-xl sm:text-2xl" />
@@ -107,7 +107,7 @@ export default function Banner() {
                                 className="absolute flex items-center gap-3 w-[130px] sm:w-[160px] md:w-[180px] 
           h-[55px] sm:h-[65px] bg-white/30 border border-white/20 rounded-xl 
           backdrop-blur-md shadow-lg p-3 sm:p-4 
-          top-[25%] right-[5%] sm:right-[8%] 
+          top-[25%] right-[1%] sm:right-[8%] 
           hover:bg-white/40 transition-all duration-300"
                             >
                                 <FaStar className="text-yellow-400 text-xl sm:text-2xl drop-shadow-sm" />
@@ -122,7 +122,7 @@ export default function Banner() {
                                 className="absolute flex items-center gap-3 w-[130px] sm:w-[160px] md:w-[180px] 
           h-[55px] sm:h-[65px] bg-white/30 border border-white/20 rounded-xl 
           backdrop-blur-3xl shadow-lg p-3 sm:p-4 
-          bottom-[5%] right-[5%] sm:right-[10%] 
+          bottom-[5%] right-[2%] sm:right-[10%] 
           hover:bg-white/40 transition-all duration-300"
                             >
                                 <FaCommentAlt className="text-green-500 text-xl sm:text-2xl" />

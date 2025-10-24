@@ -67,6 +67,9 @@ export default function Login() {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-linear-to-br from-indigo-100 via-sky-50 to-blue-100 px-4 py-10">
+     <title>
+      SkillSwap || Login 
+     </title>
       <div className="w-full max-w-md bg-white/60 backdrop-blur-xl rounded-3xl shadow-xl p-8 border border-white/30">
         {/* Header */}
         <h1 className="text-4xl font-bold text-center text-indigo-700 mb-6">

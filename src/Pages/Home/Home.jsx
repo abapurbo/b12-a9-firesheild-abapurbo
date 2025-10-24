@@ -8,6 +8,9 @@ export default function Home() {
 
   return (
     <div>
+      <title>
+        SkillSwap || Home
+      </title>
       <div>
         <Banner></Banner>
         <MarqueeNotice></MarqueeNotice>

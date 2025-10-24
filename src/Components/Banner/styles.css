@@ -29,3 +29,8 @@
     height: auto;
   }
 }
+@media screen and (min-width:1024px) and (max-width:1366px) {
+  .swiper{
+    height:600px;
+  }
+}

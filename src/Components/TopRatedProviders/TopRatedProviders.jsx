@@ -18,12 +18,12 @@ export default function TopRatedProviders() {
         AOS.init({
             duration: 1000,
             easing: "ease-in-out",
-            once: false,
+            once:true,
             mirror: true,
         });
     }, []);
     return (
-        <section className="py-10 container mx-auto px-10 mb-10 bg-gray-50">
+        <section className="py-10 container mx-auto px-10 mb-10 ">
             {/* ===== Top Rated Providers ===== */}
             <div data-aos='fade-up' className="text-center mb-14">
                 <h2 className="text-[32px] md:text-5xl font-bold  text-gray-800">
@@ -45,7 +45,7 @@ export default function TopRatedProviders() {
             </div>
 
             {/* ===== How It Works Section ===== */}
-            <div className="mt-32 text-center container mx-auto px-6 md:px-10">
+            <div className="mt-32 text-center container mx-auto  ">
                 <div data-aos='fade-up'  data-aos-offset="50">
                     <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
                         How <span className="text-indigo-600">It Works</span>
@@ -55,9 +55,9 @@ export default function TopRatedProviders() {
                     </p>
                 </div>
 
-                <div data-aos='fade-up' className="grid gap-10 mt-12 sm:grid-cols-3">
+                <div data-aos='fade-up' className="grid gap-10  mt-12 sm:grid-cols-3">
                     {/* Step 1 */}
-                    <div className="bg-gradient-to-br from-indigo-50 via-white to-blue-50 rounded-3xl shadow-lg p-8 flex flex-col items-center text-center transform transition-transform duration-500 hover:scale-105 hover:shadow-2xl">
+                    <div className="bg-gradient-to-br from-indigo-50 via-white to-blue-50 rounded-3xl shadow-lg lg:p-8 md:p-6 p-8 flex flex-col items-center text-center transform transition-transform duration-500 hover:scale-105 hover:shadow-2xl">
                         <div className="bg-indigo-100 text-indigo-600 p-4 rounded-full text-4xl mb-4 flex items-center justify-center">
                             <FaChalkboardTeacher />
                         </div>
@@ -68,7 +68,7 @@ export default function TopRatedProviders() {
                     </div>
 
                     {/* Step 2 */}
-                    <div className="bg-gradient-to-br from-indigo-50 via-white to-blue-50 rounded-3xl shadow-lg p-8 flex flex-col items-center text-center transform transition-transform duration-500 hover:scale-105 hover:shadow-2xl">
+                    <div className="bg-gradient-to-br from-indigo-50 via-white to-blue-50 rounded-3xl shadow-lg lg:p-8 md:p-6 p-8 flex flex-col items-center text-center transform transition-transform duration-500 hover:scale-105 hover:shadow-2xl">
                         <div className="bg-indigo-100 text-indigo-600 p-4 rounded-full text-4xl mb-4 flex items-center justify-center">
                             <FaRegClock />
                         </div>
@@ -79,7 +79,7 @@ export default function TopRatedProviders() {
                     </div>
 
                     {/* Step 3 */}
-                    <div className="bg-gradient-to-br from-indigo-50 via-white to-blue-50 rounded-3xl shadow-lg p-8 flex flex-col items-center text-center transform transition-transform duration-500 hover:scale-105 hover:shadow-2xl">
+                    <div className="bg-gradient-to-br from-indigo-50 via-white to-blue-50 rounded-3xl shadow-lg lg:p-8 md:p-6 p-8 flex flex-col items-center text-center transform transition-transform duration-500 hover:scale-105 hover:shadow-2xl">
                         <div className="bg-indigo-100 text-indigo-600 p-4 rounded-full text-4xl mb-4 flex items-center justify-center">
                             <FaCheckCircle />
                         </div>
