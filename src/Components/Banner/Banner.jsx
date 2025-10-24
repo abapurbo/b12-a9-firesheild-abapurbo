@@ -43,7 +43,7 @@ export default function Banner() {
                         >
                             <p className="text-2xl md:text-start sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
                                 <span className="text-primary">Teach</span> what you know,
-                                <br  className='break'/>
+                                <br className='break' />
                                 <span className="text-primary">Learn</span> what you love.
                             </p>
 
@@ -147,8 +147,8 @@ export default function Banner() {
 
                         {/* Left Text Section */}
                         <div className="relative z-10 flex-1 flex flex-col justify-start items-center  md:justify-start md:items-start gap-6 text-center lg:text-left  lg:mt-0">
-                            <p  className="text-3xl md:text-start text-center sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-                                Learn a New Skill <br className="break hidden md:block" />Today
+                            <p className="text-[26px] md:text-start text-center sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+                                Learn a New Skill <br  />Today
                             </p>
 
                             <p className="text-gray-600 md:text-start text-center text-base text-lg max-w-xl mx-auto lg:mx-0">
@@ -157,11 +157,11 @@ export default function Banner() {
                             </p>
 
                             <div className="flex  justify-center lg:justify-start gap-4">
-                                <button className="py-3 uppercase sm:py-4 btn text-lg  btn-primary">
-                                    Explore Skills
+                                <button className="py-3 sm:py-4 btn text-lg  btn-primary">
+                                    Get Started
                                 </button>
-                                <button className="py-3 uppercase sm:py-4 btn text-lg btn-outline btn-primary">
-                                    offer a Skill
+                                <button className="py-3 sm:py-4 btn text-lg btn-outline btn-primary">
+                                    Explore Skills
                                 </button>
                             </div>
                         </div>
@@ -185,8 +185,8 @@ export default function Banner() {
                     {/* Left Text Section */}
                     <div className="relative z-10 flex-1 flex flex-col justify-start items-center   md:items-start gap-6 
       text-center lg:text-left mt-10 lg:mt-0">
-                        <p className="text-3xl md:text-start text-center sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-                            SkillSwap - Learn, Teach,<br className='break hidden  md:block' />Gorw Togeether
+                        <p className="text-[26px] md:text-start text-center sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+                            SkillSwap - Learn, Teach,<br />Gorw Togeether
                         </p>
 
                         <p className="text-gray-600 text-base sm:text-lg max-w-xl mx-auto lg:mx-0">
@@ -196,8 +196,12 @@ export default function Banner() {
 
 
                         <div className="flex flex-wrap md:w-fit w-full justify-center lg:justify-start gap-4">
-                            <button className="py-3 sm:py-4 btn text-lg btn-outline btn-primary">Get Started</button>
-                            <button className="py-3 sm:py-4 btn text-lg btn-primary">Explore Skills</button>
+                            <button className="py-3 sm:py-4 btn text-lg  btn-primary">
+                                Get Started
+                            </button>
+                            <button className="py-3 sm:py-4 btn text-lg btn-outline btn-primary">
+                                Explore Skills
+                            </button>
                         </div>
                     </div>
 
