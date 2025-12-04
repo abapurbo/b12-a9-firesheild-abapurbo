@@ -56,7 +56,7 @@ export default function AllSkills() {
       {/* Filter Dropdown */}
       <div className="flex justify-center sm:justify-end mb-6" data-aos="fade-right">
         <select
-          className="px-4 py-2 border border-indigo-400 rounded-md bg-white text-indigo-700 shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 w-[180px] sm:w-auto"
+          className="px-4 py-2 border border-indigo-400 rounded-md bg-white text-indigo-700 shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 md:w-[220px] w-[200px]"
           value={sortOrder}
           onChange={(e) => setSortOrder(e.target.value)}
         >
