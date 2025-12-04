@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import PropularSkill from "./PropularSkill";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Link } from "react-router";
 
 export default function PopularSkills() {
   const [cards, setCards] = useState([]);
@@ -75,12 +76,12 @@ export default function PopularSkills() {
         data-aos-delay="200"
         className="text-center mt-16"
       >
-        <button
+        <Link to='/skills'
           className="btn btn-outline btn-primary px-8 text-base font-medium rounded-full shadow-sm hover:shadow-md transition-all duration-300"
-          onClick={() => setShowAll(!showAll)}
+        
         >
-          {showAll ? "Show Less" : "Explore All Skills"}
-        </button>
+          All Skills
+        </Link>
       </div>
     </section>
   );

@@ -8,6 +8,7 @@ import Login from "../Pages/Login/Login";
 import SignUp from '../Pages/SignUp/SignUp'
 import ForgetPassword from "../Pages/ForgetPassword/ForgetPassword";
 import SkillDetailPage from "../Pages/SkillDetailPage/SkillDetailPage";
+import AllSkills from "../Pages/AllSkills/AllSkills";
 const MainLayout = lazy(() => import("../Layout/MainLayout"))
 const router = createBrowserRouter([
    {
@@ -19,7 +20,11 @@ const router = createBrowserRouter([
          {
             index: true,
             Component: Home
-         },
+         }, {
+           path:'/skills',
+           Component:AllSkills
+         }
+         ,
          {
             path: '/profile',
             element: <PrivateRoute>
@@ -34,8 +39,8 @@ const router = createBrowserRouter([
 
 
          }, {
-            path: '/forgetPassword', element:<ForgetPassword></ForgetPassword>
-   
+            path: '/forgetPassword', element: <ForgetPassword></ForgetPassword>
+
 
          }, {
             path: '/skillDetailsPage/:id',

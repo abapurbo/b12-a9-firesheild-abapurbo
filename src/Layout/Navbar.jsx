@@ -28,6 +28,16 @@ const Navbar = () => {
                   Home
                 </NavLink>
               </li>
+              <li>
+                <NavLink
+                  to="/"
+                  className={({ isActive }) =>
+                    `px-3 py-2 rounded-md font-medium transition ${isActive ? "font-semibold text-blue-600" : "hover:text-blue-600"}`
+                  }
+                >
+                  Sklls
+                </NavLink>
+              </li>
 
               <li>
                 <NavLink
@@ -47,7 +57,7 @@ const Navbar = () => {
               SkillSwap
             </h1>
           </Link>
-       
+
         </div>
 
         {/* Nav Links */}
@@ -63,18 +73,31 @@ const Navbar = () => {
           >
             Home
           </NavLink>
-
           <NavLink
-            to="/profile"
+            to="/skills"
             className={({ isActive }) =>
               `px-3 py-2 rounded-md font-medium transition ${isActive
-                ? "font-semibold text-blue-600"
-                : "hover:text-blue-600"
+                ? "font-semibold  text-blue-600"
+                : " hover:text-blue-600"
               }`
             }
           >
-            My Profile
+            Skills
           </NavLink>
+
+          {
+            user && <NavLink
+              to="/profile"
+              className={({ isActive }) =>
+                `px-3 py-2 rounded-md font-medium transition ${isActive
+                  ? "font-semibold text-blue-600"
+                  : "hover:text-blue-600"
+                }`
+              }
+            >
+              My Profile
+            </NavLink>
+          }
 
         </div>
 
@@ -99,17 +122,24 @@ const Navbar = () => {
                   </div>
                 </div>
                 <ul tabIndex="-1" className="dropdown-content md:hidden menu bg-base-100 rounded-box z-1 w-30 p-2 shadow-sm">
-                  <li> <NavLink
-                    to="/profile"
-                    className={({ isActive }) =>
-                      `px-3 py-2 rounded-md font-medium transition ${isActive
-                        ? "text-blue-600"
-                        : " hover:text-blue-600"
-                      }`
-                    }
-                  >
-                    My Profile
-                  </NavLink></li>
+                  <li>
+                    <NavLink
+                      to="/profile"
+                      className={({ isActive }) =>
+                        `px-3 py-2 rounded-md font-medium transition ${isActive
+                          ? "text-blue-600"
+                          : " hover:text-blue-600"
+                        }`
+                      }
+                    >
+                      My Profile
+                    </NavLink>
+
+                  </li>
+
+
+
+
                   <li>
                     <button
                       onClick={() => logOut()}
